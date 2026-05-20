@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alphabet Land - Kids Fun Time</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#76da75",
+                    "surface-dim": "#dfd9ce",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "background": "#fff9ed",
+                    "on-primary-fixed": "#271900",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1d1c15",
+                    "surface-container-low": "#f9f3e7",
+                    "inverse-primary": "#ffba20",
+                    "primary-fixed": "#ffdea8",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#004663",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e8e2d6",
+                    "on-secondary-fixed": "#001e2d",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fff9ed",
+                    "surface-container-high": "#ede8dc",
+                    "surface-tint": "#7c5800",
+                    "inverse-on-surface": "#f6f0e4",
+                    "inverse-surface": "#333029",
+                    "secondary-fixed-dim": "#81cfff",
+                    "primary-container": "#ffb800",
+                    "tertiary": "#006e1c",
+                    "secondary-fixed": "#c6e7ff",
+                    "surface-container-highest": "#e8e2d6",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "primary-fixed-dim": "#ffba20",
+                    "on-tertiary-fixed": "#002204",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#6b4c00",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "outline": "#837560",
+                    "primary": "#7c5800",
+                    "secondary-container": "#00baff",
+                    "outline-variant": "#d5c4ab",
+                    "surface": "#fff9ed",
+                    "on-surface-variant": "#514532",
+                    "secondary": "#00658d",
+                    "tertiary-fixed": "#94f990",
+                    "on-background": "#1d1c15",
+                    "surface-container": "#f3ede1",
+                    "on-tertiary-container": "#005f17",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-padding-desktop": "48px",
+                    "container-padding-mobile": "24px",
+                    "unit": "8px",
+                    "element-gap": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Quicksand"],
+                    "body-lg": ["Quicksand"],
+                    "headline-md": ["Quicksand"],
+                    "headline-lg-mobile": ["Quicksand"],
+                    "button-text": ["Quicksand"],
+                    "body-md": ["Quicksand"],
+                    "label-bold": ["Quicksand"],
+                    "headline-xl": ["Quicksand"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                    "button-text": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .chunky-shadow {
+            box-shadow: 0px 6px 0px rgba(124,88,0,0.1);
+        }
+        .chunky-shadow-active {
+            box-shadow: 0px 8px 0px rgba(124,88,0,0.15);
+        }
+        .bouncy-press:active {
+            transform: translateY(4px);
+            box-shadow: 0px 2px 0px rgba(124,88,0,0.1);
+        }
+        
+        /* Floating animations for fun vibe */
+        @keyframes float1 {
+            0%, 100% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-8px) rotate(2deg); }
+        }
+        @keyframes float2 {
+            0%, 100% { transform: translateY(0px) rotate(2deg); }
+            50% { transform: translateY(-10px) rotate(-1deg); }
+        }
+        
+        .float-anim-1 { animation: float1 4s ease-in-out infinite; }
+        .float-anim-2 { animation: float2 5s ease-in-out infinite reverse; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col pt-20 pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-background dark:bg-background shadow-[0px_6px_0px_rgba(124,88,0,0.1)] h-20">
+<div class="flex justify-between items-center w-full px-gutter h-20 max-w-7xl mx-auto">
+<div class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg font-black text-primary dark:text-primary-fixed">
+                Kids Fun Time
+            </div>
+<!-- Web Navigation -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-button-text text-button-text hover:scale-105 transition-transform active:translate-y-1" href="#">Home</a>
+<a class="text-primary font-bold font-button-text text-button-text hover:scale-105 transition-transform active:translate-y-1" href="#">ABC</a>
+<a class="text-on-surface-variant font-button-text text-button-text hover:scale-105 transition-transform active:translate-y-1" href="#">Games</a>
+<a class="text-on-surface-variant font-button-text text-button-text hover:scale-105 transition-transform active:translate-y-1" href="#">Progress</a>
+</nav>
+<div class="flex gap-4">
+<button class="text-primary dark:text-primary-fixed hover:scale-105 transition-transform active:translate-y-1 w-12 h-12 rounded-full bg-surface-container flex items-center justify-center chunky-shadow">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+<button class="text-primary dark:text-primary-fixed hover:scale-105 transition-transform active:translate-y-1 w-12 h-12 rounded-full bg-surface-container flex items-center justify-center chunky-shadow">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">stars</span>
+</button>
+<button class="text-primary dark:text-primary-fixed hover:scale-105 transition-transform active:translate-y-1 w-12 h-12 rounded-full bg-surface-container flex items-center justify-center chunky-shadow hidden md:flex">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center w-full max-w-7xl mx-auto px-container-padding-mobile md:px-container-padding-desktop py-8 md:py-12 gap-12">
+<!-- Hero Banner -->
+<section class="w-full bg-primary-container rounded-xl p-8 flex flex-col md:flex-row items-center justify-between chunky-shadow gap-8 overflow-hidden relative">
+<!-- Decorative blobs -->
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-inverse-primary rounded-full opacity-50 blur-xl"></div>
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-tertiary-container rounded-full opacity-50 blur-xl"></div>
+<div class="flex flex-col gap-4 z-10 text-center md:text-left">
+<h1 class="font-headline-xl text-headline-xl text-on-primary-container">Alphabet Land</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-lg">
+                    Let's explore the letters! Tap on a big, bouncy letter to learn its sound and play a mini-game. You're doing great!
+                </p>
+<div class="flex gap-4 items-center justify-center md:justify-start mt-4">
+<div class="bg-surface-container-lowest rounded-full px-6 py-2 flex items-center gap-2 chunky-shadow font-label-bold text-label-bold text-primary">
+<span class="material-symbols-outlined text-inverse-primary" style="font-variation-settings: 'FILL' 1;">stars</span>
+                        4 Letters Mastered!
+                    </div>
+</div>
+</div>
+<div class="z-10 w-48 h-48 md:w-64 md:h-64 rounded-xl overflow-hidden chunky-shadow float-anim-1 border-4 border-surface-container-lowest bg-white relative">
+<img alt="Alphabet Blocks" class="w-full h-full object-cover" data-alt="A bright, playful close-up of colorful wooden alphabet blocks spelling out letters in a sunny playroom setting. The lighting is high-key and cheerful, perfectly matching a bright, modern children's app aesthetic. Soft, squishy shadows and vibrant primary colors (reds, yellows, blues) dominate the scene. The mood is highly energetic, tactile, and deeply joyful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqgKZHYHG5UH1fyoZKEh20nE0d_Sd5k401TXzF2mnjFnT4ZKOu_7HkQ_8rZkw1bpg-hVlylcayTRS__xaAbTtT3lRxBEBOWD09RrN2DCy-s9OnOW1KGLulQLkKS1dsyI2QOPK1u0EnXUXoFmGZGir_OVzlHhLQOU5BqbDYJyQqJ2ALgrkIljzCIHexSJaN-7UWjfm3-fxYTs9tESupm5oHqDxxKvevYyeacl58lHWgTh5c7aiWqjh4Uk16efL2BQvR_kvnb861L40w"/>
+</div>
+</section>
+<!-- Alphabet Grid -->
+<section class="w-full">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-element-gap md:gap-gutter">
+<!-- Highlighted Letters (Progress) -->
+<!-- A -->
+<button class="group relative bg-tertiary-container border-4 border-tertiary rounded-xl aspect-square flex flex-col items-center justify-center chunky-shadow-active bouncy-press transition-all hover:scale-105 overflow-hidden col-span-2 sm:col-span-1 row-span-2 sm:row-span-1 h-full sm:h-auto">
+<div class="absolute inset-0 bg-white opacity-20 group-hover:opacity-0 transition-opacity"></div>
+<span class="font-headline-xl text-[80px] leading-none font-black text-on-tertiary-container drop-shadow-md">Aa</span>
+<div class="absolute bottom-2 right-2 bg-white rounded-full p-1 chunky-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</button>
+<!-- B -->
+<button class="group relative bg-secondary-container border-4 border-secondary rounded-xl aspect-square flex flex-col items-center justify-center chunky-shadow-active bouncy-press transition-all hover:scale-105 overflow-hidden col-span-2 sm:col-span-1 row-span-2 sm:row-span-1 h-full sm:h-auto">
+<div class="absolute inset-0 bg-white opacity-20 group-hover:opacity-0 transition-opacity"></div>
+<span class="font-headline-xl text-[80px] leading-none font-black text-on-secondary-container drop-shadow-md">Bb</span>
+<div class="absolute bottom-2 right-2 bg-white rounded-full p-1 chunky-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</button>
+<!-- C -->
+<button class="group relative bg-inverse-primary border-4 border-primary rounded-xl aspect-square flex flex-col items-center justify-center chunky-shadow-active bouncy-press transition-all hover:scale-105 overflow-hidden col-span-2 sm:col-span-1 row-span-2 sm:row-span-1 h-full sm:h-auto">
+<div class="absolute inset-0 bg-white opacity-20 group-hover:opacity-0 transition-opacity"></div>
+<span class="font-headline-xl text-[80px] leading-none font-black text-on-primary-container drop-shadow-md">Cc</span>
+<div class="absolute bottom-2 right-2 bg-white rounded-full p-1 chunky-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</button>
+<!-- D -->
+<button class="group relative bg-error-container border-4 border-error rounded-xl aspect-square flex flex-col items-center justify-center chunky-shadow-active bouncy-press transition-all hover:scale-105 overflow-hidden col-span-2 sm:col-span-1 row-span-2 sm:row-span-1 h-full sm:h-auto float-anim-2">
+<div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
+<span class="font-headline-xl text-[80px] leading-none font-black text-on-error-container drop-shadow-md">Dd</span>
+<div class="absolute top-2 right-2 flex gap-1">
+<span class="material-symbols-outlined text-error text-xl animate-pulse" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<span class="font-label-bold text-label-bold text-on-error-container bg-white/50 px-2 py-1 rounded-full mt-2">Next!</span>
+</button>
+<!-- Regular Letters -->
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface-variant">Ee</span>
+</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface-variant">Ff</span>
+</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface-variant">Gg</span>
+</button>
+<!-- Filler letters to simulate full alphabet without overwhelming code size -->
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface-variant">Hh</span>
+</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface-variant">Ii</span>
+</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface-variant">Jj</span>
+</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface-variant">Kk</span>
+</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface-variant">Ll</span>
+</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface-variant">Mm</span>
+</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface-variant">Nn</span>
+</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline opacity-50 cursor-not-allowed">
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 1;">lock</span>
+</button>
+<button class="bg-surface-container-lowest border-2 border-outline-variant rounded-xl aspect-square flex items-center justify-center chunky-shadow bouncy-press transition-all hover:bg-surface-container-low hover:border-outline opacity-50 cursor-not-allowed">
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 1;">lock</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container-low dark:bg-surface-container-low border-t-4 border-primary-container shadow-[0px_-4px_10px_rgba(0,0,0,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-2 hover:bg-secondary-container hover:text-on-secondary-container active:scale-90 transition-transform duration-150 rounded-xl" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-label-bold text-label-bold mt-1">Home</span>
+</a>
+<!-- Active Tab -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-6 py-2 hover:bg-secondary-container hover:text-on-secondary-container active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">abc</span>
+<span class="font-label-bold text-label-bold mt-1">ABC</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-2 hover:bg-secondary-container hover:text-on-secondary-container active:scale-90 transition-transform duration-150 rounded-xl" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">videogame_asset</span>
+<span class="font-label-bold text-label-bold mt-1">Games</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-2 hover:bg-secondary-container hover:text-on-secondary-container active:scale-90 transition-transform duration-150 rounded-xl" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">query_stats</span>
+<span class="font-label-bold text-label-bold mt-1">Progress</span>
+</a>
+</nav>
+</body></html>

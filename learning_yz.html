@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kids Fun Time - Learn ABCs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#00baff",
+                    "on-background": "#1d1c15",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#c6e7ff",
+                    "inverse-primary": "#ffba20",
+                    "surface": "#fff9ed",
+                    "inverse-on-surface": "#f6f0e4",
+                    "surface-container-high": "#ede8dc",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#006e1c",
+                    "outline-variant": "#d5c4ab",
+                    "on-secondary-fixed": "#001e2d",
+                    "primary": "#7c5800",
+                    "tertiary-container": "#76da75",
+                    "primary-container": "#ffb800",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "on-surface-variant": "#514532",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#333029",
+                    "outline": "#837560",
+                    "secondary-fixed-dim": "#81cfff",
+                    "primary-fixed-dim": "#ffba20",
+                    "on-secondary-container": "#004663",
+                    "tertiary-fixed": "#94f990",
+                    "on-primary-fixed": "#271900",
+                    "on-surface": "#1d1c15",
+                    "on-primary-container": "#6b4c00",
+                    "surface-container": "#f3ede1",
+                    "on-tertiary-fixed": "#002204",
+                    "background": "#fff9ed",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#7c5800",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "surface-variant": "#e8e2d6",
+                    "surface-container-highest": "#e8e2d6",
+                    "on-tertiary-container": "#005f17",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "surface-dim": "#dfd9ce",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fff9ed",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "surface-container-low": "#f9f3e7",
+                    "secondary": "#00658d",
+                    "primary-fixed": "#ffdea8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding-mobile": "24px",
+                    "unit": "8px",
+                    "element-gap": "16px",
+                    "gutter": "24px",
+                    "container-padding-desktop": "48px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Quicksand"],
+                    "headline-lg": ["Quicksand"],
+                    "button-text": ["Quicksand"],
+                    "body-lg": ["Quicksand"],
+                    "label-bold": ["Quicksand"],
+                    "body-md": ["Quicksand"],
+                    "headline-xl": ["Quicksand"],
+                    "headline-lg-mobile": ["Quicksand"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "button-text": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+                    "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 48;
+        }
+        
+        /* Bouncy squishy animations */
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+        .animate-bounce-subtle {
+            animation: bounce-subtle 3s ease-in-out infinite;
+        }
+        
+        .btn-press {
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-press:active {
+            transform: translateY(4px);
+            box-shadow: 0px 0px 0px rgba(0,0,0,0) !important;
+        }
+        
+        /* Letter specific styles */
+        .card-y { border-color: #00baff; box-shadow: 0px 8px 0px #00658d; }
+        .card-z { border-color: #76da75; box-shadow: 0px 8px 0px #006e1c; }
+        
+        .text-stroke {
+            -webkit-text-stroke: 2px white;
+        }
+        
+        .mascot-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-32 md:pb-0 overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 bg-background shadow-[0px_6px_0px_rgba(124,88,0,0.1)] z-40 sticky">
+<div class="flex justify-between items-center w-full px-gutter h-20 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">child_care</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg font-black text-primary">Kids Fun Time</h1>
+</div>
+<!-- Desktop Nav (Hidden on Mobile) -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant font-button-text text-button-text hover:scale-105 transition-transform" href="#">Home</a>
+<a class="text-primary font-bold font-button-text text-button-text hover:scale-105 transition-transform flex flex-col items-center after:content-[''] after:w-2 after:h-2 after:bg-primary after:rounded-full after:mt-1" href="#">ABC</a>
+<a class="text-on-surface-variant font-button-text text-button-text hover:scale-105 transition-transform" href="#">Games</a>
+<a class="text-on-surface-variant font-button-text text-button-text hover:scale-105 transition-transform" href="#">Progress</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-primary hover:scale-105 transition-transform active:translate-y-1 active:shadow-none duration-100 p-2 bg-primary-container rounded-full shadow-[0px_4px_0px_rgba(124,88,0,0.5)] btn-press">
+<span class="material-symbols-outlined" data-icon="stars">stars</span>
+</button>
+<button class="text-primary hover:scale-105 transition-transform active:translate-y-1 active:shadow-none duration-100 p-2 bg-surface-container-high rounded-full shadow-[0px_4px_0px_rgba(0,0,0,0.1)] btn-press">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="text-primary hover:scale-105 transition-transform active:translate-y-1 active:shadow-none duration-100 p-2 bg-surface-container-high rounded-full shadow-[0px_4px_0px_rgba(0,0,0,0.1)] btn-press">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-container-padding-mobile md:px-container-padding-desktop py-8 md:py-12 flex flex-col gap-12">
+<!-- Header Section with Mascot -->
+<section class="flex items-center justify-between bg-surface-container rounded-xl p-6 md:p-8 shadow-[0px_6px_0px_rgba(0,0,0,0.05)] border-2 border-surface-dim relative overflow-hidden">
+<div class="z-10 flex-1">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-2">Let's learn Y and Z!</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Tap the letters to hear them and learn new words.</p>
+</div>
+<div class="w-32 h-32 md:w-48 md:h-48 relative z-10 mascot-float flex-shrink-0 hidden sm:block">
+<img alt="Friendly dinosaur mascot smiling and ready to learn" class="w-full h-full object-contain filter drop-shadow-lg" src="https://lh3.googleusercontent.com/aida/ADBb0ugOMgUUml9sXsDQdJ-BrPt71bSt5x_ttWYwcJxvOdqyR2YOSb4cF8Oyn7lgTRFUNpOA303QH3SEYktlLw_k2MtWNrq3bcgKXXx5DmAZxCePHWXopfb77vdmPo3cCqYLtKNyEKOUWPDO0oKL9llgJTslkuJNp_XWmswV2O45HJ6rQZeVpx5QlpflPYgCIMonqXOZdEFbf2aPuP9UNcvH5SS7p4t5kA60rTgGOaDcpSnDEa2qK8ho8MFcT9yD"/>
+</div>
+<!-- Decorative background blobs -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary-container rounded-full opacity-20 blur-xl"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-tertiary-container rounded-full opacity-20 blur-xl"></div>
+</section>
+<!-- Letter Cards Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+<!-- Letter Y Card -->
+<div class="bg-surface-container-lowest rounded-[2.5rem] p-6 md:p-8 border-4 card-y relative flex flex-col items-center justify-center min-h-[400px] overflow-hidden group">
+<div class="absolute top-4 right-4 flex gap-2">
+<button aria-label="Play sound for Y" class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center shadow-[0px_4px_0px_rgba(0,0,0,0.1)] btn-press hover:bg-secondary-container hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="volume_up">volume_up</span>
+</button>
+<button aria-label="Draw letter Y" class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center shadow-[0px_4px_0px_rgba(0,0,0,0.1)] btn-press hover:bg-secondary-container hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="edit">edit</span>
+</button>
+</div>
+<div class="text-[180px] leading-none font-black text-secondary-container text-stroke filter drop-shadow-md z-10 font-headline-xl group-hover:scale-110 transition-transform duration-300">
+                    Yy
+                </div>
+<div class="w-48 h-48 mt-4 relative z-10 animate-bounce-subtle">
+<!-- Using the 3D icons image, cropped or positioned to show the Y part -->
+<div class="w-full h-full rounded-full overflow-hidden bg-white border-4 border-secondary-container shadow-inner">
+<img alt="3D clay style Yo-yo starting with letter Y" class="w-full h-[200%] object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPWdHLn5LW2tXwd3vDuua--3FpsxIBwG0oj0lj80QqK7HPc2FyWV1p0GD7f61OYOS18S-xnwOadVC54QfbkSsmsobv-NBfQ6HcU1dEWOr0J_gBIQqKvw2uPv_a-Y-4-PcsE7NSvB1Q3ZoTQqaWxELvw2u83BSM-X7SG4A5kJQ4HBI_TW68u65ihAD0fCO42MZzAlj1VT0zneo4faUkgJGpj7TYINIlj2M2EQvehy7g0gFksnGuezxSyHRNA5ezyZmn3SjCgZic-Q4"/>
+</div>
+</div>
+<div class="mt-6 bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-headline-md text-headline-md shadow-[0px_4px_0px_rgba(0,70,99,0.3)]">
+                    Yo-yo
+                </div>
+<!-- Background pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#00baff 2px, transparent 2px); background-size: 20px 20px;"></div>
+</div>
+<!-- Letter Z Card -->
+<div class="bg-surface-container-lowest rounded-[2.5rem] p-6 md:p-8 border-4 card-z relative flex flex-col items-center justify-center min-h-[400px] overflow-hidden group">
+<div class="absolute top-4 right-4 flex gap-2">
+<button aria-label="Play sound for Z" class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center shadow-[0px_4px_0px_rgba(0,0,0,0.1)] btn-press hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="volume_up">volume_up</span>
+</button>
+<button aria-label="Draw letter Z" class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center shadow-[0px_4px_0px_rgba(0,0,0,0.1)] btn-press hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="edit">edit</span>
+</button>
+</div>
+<div class="text-[180px] leading-none font-black text-tertiary-container text-stroke filter drop-shadow-md z-10 font-headline-xl group-hover:scale-110 transition-transform duration-300">
+                    Zz
+                </div>
+<div class="w-48 h-48 mt-4 relative z-10 animate-bounce-subtle" style="animation-delay: 0.5s;">
+<!-- Using the 3D icons image, cropped or positioned to show the Z part -->
+<div class="w-full h-full rounded-full overflow-hidden bg-white border-4 border-tertiary-container shadow-inner flex items-end">
+<img alt="3D clay style Zebra starting with letter Z" class="w-full h-[200%] object-cover object-bottom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPWdHLn5LW2tXwd3vDuua--3FpsxIBwG0oj0lj80QqK7HPc2FyWV1p0GD7f61OYOS18S-xnwOadVC54QfbkSsmsobv-NBfQ6HcU1dEWOr0J_gBIQqKvw2uPv_a-Y-4-PcsE7NSvB1Q3ZoTQqaWxELvw2u83BSM-X7SG4A5kJQ4HBI_TW68u65ihAD0fCO42MZzAlj1VT0zneo4faUkgJGpj7TYINIlj2M2EQvehy7g0gFksnGuezxSyHRNA5ezyZmn3SjCgZic-Q4"/>
+</div>
+</div>
+<div class="mt-6 bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded-full font-headline-md text-headline-md shadow-[0px_4px_0px_rgba(0,95,23,0.3)]">
+                    Zebra
+                </div>
+<!-- Background pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#76da75 2px, transparent 2px); background-size: 20px 20px;"></div>
+</div>
+</section>
+<!-- Quiz Section: Find the Letter -->
+<section class="bg-primary-fixed rounded-2xl p-6 md:p-8 shadow-[0px_8px_0px_rgba(124,88,0,0.2)] border-2 border-primary-container relative mt-8">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-inverse-primary text-on-primary-container px-6 py-2 rounded-full font-headline-md text-headline-md shadow-[0px_4px_0px_rgba(107,76,0,0.3)] border-2 border-white z-20 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+                Mini Game
+            </div>
+<div class="text-center mb-8 mt-4">
+<h3 class="font-headline-lg text-headline-lg text-on-primary-container">Find the letter <strong class="text-error text-4xl">Z</strong></h3>
+</div>
+<div class="flex flex-wrap justify-center gap-4 md:gap-8">
+<!-- Distractor 1 -->
+<button class="w-20 h-20 md:w-24 md:h-24 bg-surface-container-lowest rounded-xl shadow-[0px_6px_0px_rgba(0,0,0,0.1)] border-2 border-surface-variant flex items-center justify-center font-headline-xl text-headline-xl text-on-surface-variant btn-press hover:bg-error-container hover:text-on-error-container hover:border-error transition-colors">
+                    W
+                </button>
+<!-- Target -->
+<button class="w-20 h-20 md:w-24 md:h-24 bg-surface-container-lowest rounded-xl shadow-[0px_6px_0px_rgba(0,0,0,0.1)] border-2 border-surface-variant flex items-center justify-center font-headline-xl text-headline-xl text-on-surface-variant btn-press hover:bg-tertiary-container hover:text-on-tertiary-container hover:border-tertiary transition-colors" onclick="this.classList.add('bg-tertiary-container', 'border-tertiary', 'scale-110'); setTimeout(() =&gt; { alert('Great job! You found Z!'); }, 300);">
+                    Z
+                </button>
+<!-- Distractor 2 -->
+<button class="w-20 h-20 md:w-24 md:h-24 bg-surface-container-lowest rounded-xl shadow-[0px_6px_0px_rgba(0,0,0,0.1)] border-2 border-surface-variant flex items-center justify-center font-headline-xl text-headline-xl text-on-surface-variant btn-press hover:bg-error-container hover:text-on-error-container hover:border-error transition-colors">
+                    X
+                </button>
+<!-- Distractor 3 -->
+<button class="w-20 h-20 md:w-24 md:h-24 bg-surface-container-lowest rounded-xl shadow-[0px_6px_0px_rgba(0,0,0,0.1)] border-2 border-surface-variant flex items-center justify-center font-headline-xl text-headline-xl text-on-surface-variant btn-press hover:bg-error-container hover:text-on-error-container hover:border-error transition-colors">
+                    Y
+                </button>
+</div>
+</section>
+<!-- Navigation Buttons -->
+<div class="flex justify-between items-center mt-4">
+<button class="px-6 py-4 bg-surface-container-high rounded-xl font-button-text text-button-text text-on-surface-variant shadow-[0px_4px_0px_rgba(0,0,0,0.1)] btn-press flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="arrow_back_ios">arrow_back_ios</span>
+                Back (W, X)
+            </button>
+<button class="px-8 py-4 bg-primary-container rounded-xl font-button-text text-button-text text-on-primary-container shadow-[0px_4px_0px_rgba(124,88,0,0.3)] btn-press flex items-center gap-2 border-2 border-primary">
+                Done!
+                <span class="material-symbols-outlined" data-icon="celebration">celebration</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container-low border-t-4 border-primary-container shadow-[0px_-4px_10px_rgba(0,0,0,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-2 hover:bg-secondary-container hover:text-on-secondary-container active:scale-90 transition-transform duration-150 rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl" data-icon="home">home</span>
+<span class="font-label-bold text-label-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-6 py-2 hover:bg-secondary-container hover:text-on-secondary-container active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl" data-icon="abc" data-weight="fill">abc</span>
+<span class="font-label-bold text-label-bold">ABC</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-2 hover:bg-secondary-container hover:text-on-secondary-container active:scale-90 transition-transform duration-150 rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl" data-icon="videogame_asset">videogame_asset</span>
+<span class="font-label-bold text-label-bold">Games</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-2 hover:bg-secondary-container hover:text-on-secondary-container active:scale-90 transition-transform duration-150 rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl" data-icon="query_stats">query_stats</span>
+<span class="font-label-bold text-label-bold">Progress</span>
+</a>
+</nav>
+</body></html>
